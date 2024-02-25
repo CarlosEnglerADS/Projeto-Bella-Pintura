@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LOGIN ERP Bella Pintura</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: slategray;
+            color: rgb(211, 211, 211);
+            font-family: 'Lato', sans-serif;
+            margin: 0; /* Remove margens */
+            padding: 0; /* Remove preenchimento */
+        }
+
+        /* Estilo para o formulário e a imagem */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Define a altura da tela inteira */
+        }
+
+        .card {
+            max-width: 360px;
+            padding: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            background-color: #e9ecef; /* Cor de fundo cinza claro */
+            border-radius: 20px; /* Cantos arredondados */
+            color: #333; /* Cor do texto cinza escuro */
+            text-align: center; /* Centraliza o conteúdo */
+        }
+
+        .btn {
+            background-color: black;
+            color: white;
+        }
+
+        img {
+            width: 100px;
+            margin-bottom: 20px; /* Adiciona um espaço abaixo da imagem */
+            display: block; /* Centraliza a imagem */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .manuscrita {
+            font-family: 'Pacifico', cursive;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2 class="text-center mb-4 manuscrita">ERP BELLA PINTURA</h2>
+            <h4 class="text-center mb-4 manuscrita">Seja Bem Vindo!</h4>
+
+            <img src="~/Cadeado Aberto.png" />
+
+            <!-- Correção do formulário -->
+            <form asp-controller="Home" asp-action="AbrirERP" method="post">
+                <a href="file:///C:/Users/dudaa/OneDrive/Área%20de%20Trabalho/Trabalhando%20neste/PIM3.1/Projeto%20Login%20+%20Bloco%20de%20Notas%20com%20códigos%20e%20scripts/LoginCharpBDFolhaDePag%20Levar%20Qinta/LoginCharpBDFolhaDePag.sln">
+                 
+                 <button type="submit" name="button" class="btn btn-primary btn-block">ABRIR ERP</button>
+                </a>
+
+
+                @if (ViewData["ValidateMessage"] != null)
+                {
+                    <text>
+                        <br />
+                        <label>@ViewData["ValidateMessage"]</label>
+                    </text>
+                }
+            </form>
+        </div>
+    </div>
+</body>
+</html>
